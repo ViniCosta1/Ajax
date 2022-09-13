@@ -3,7 +3,7 @@ $(document).ready(function (e) {
     $.ajax({
         type: "get",
         url: "https://servicodados.ibge.gov.br/api/v1/localidades/estados",
-        data: {orderBy: "nome"},
+        data: {orderBy: "nome"}, // Para deixar em ordem alfabética os nomes dos estados
         dataType: "json",
         success: function (response) {
             // Para cada objeto contendo os estados....
@@ -31,7 +31,7 @@ $(document).ready(function (e) {
         $.ajax({
             type: "get",
             url: "https://servicodados.ibge.gov.br/api/v1/localidades/estados/"+uf+"/municipios",
-            data: {orderBy: "nome"},
+            data: {orderBy: "nome"}, // Para deixar em ordem alfabética os nomes das cidades
             dataType: "json",
             success: function (response) {
                 // Para cada objeto contendo os cidades....
